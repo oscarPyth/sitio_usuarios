@@ -17,10 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from api_usuarios.api import api  # Asegúrate de importar el objeto api, no el módulo
+from api_usuarios.api import api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', api.urls),  # Incluye correctamente las URLs del objeto NinjaAPI
-    path('', include('sitio_usuarios.urls')),  # Incluye las URLs de sitio_usuarios
+    path('api/', api.urls),
+    path('', include('sitio_usuarios.urls')),
 ]
